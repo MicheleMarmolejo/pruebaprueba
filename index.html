@@ -3,161 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Robco Industries (TM) Termnial</title>
+    <title>Test Page - Index</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
         body {
-            background-color: #050a05;
-            font-family: 'Share Tech Mono', monospace;
-            color: #33ff33;
-            padding: 20px;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px 20px;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            color: #333;
             box-sizing: border-box;
-            text-shadow: 0 0 8px rgba(51, 255, 51, 0.6);
-        }
-
-        .terminal {
-            background-color: #071007;
-            border: 4px solid #1a4d1a;
-            border-radius: 10px;
-            padding: 25px;
-            max-width: 600px;
-            width: 100%;
-            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(26, 77, 26, 0.5);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Efecto de líneas de escaneo estilo monitor CRT antiguo */
-        .terminal::before {
-            content: " ";
-            display: block;
-            position: absolute;
-            top: 0; left: 0; bottom: 0; right: 0;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-            z-index: 2;
-            background-size: 100% 4px, 6px 100%;
-            pointer-events: none;
         }
 
         .boring-box {
-            position: relative;
-            z-index: 3;
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .boring-btn {
-            background-color: transparent;
-            color: #33ff33;
-            border: 2px solid #33ff33;
+            background-color: #28a745;
+            color: white;
+            border: none;
             padding: 10px 20px;
             font-size: 1rem;
-            font-family: 'Share Tech Mono', monospace;
-            border-radius: 0;
+            border-radius: 4px;
             cursor: pointer;
             margin-top: 15px;
-            text-shadow: 0 0 5px #33ff33;
-            box-shadow: 0 0 5px rgba(51, 255, 51, 0.4);
-            transition: background 0.2s;
         }
 
-        .boring-btn:hover {
-            background-color: #33ff33;
-            color: #050a05;
+        .adventure-box {
+            background-color: #5bc8af;
+            border: 6px solid #f7f48b;
+            border-radius: 20px;
+            padding: 25px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 10px 0 #3a8a77;
+            font-family: 'Press+Start+2P', monospace;
+            text-align: center;
+            color: #2e2e2e;
+            position: relative;
+        }
+
+        .screen {
+            background-color: #fffaf0;
+            border: 4px solid #f45d48;
+            border-radius: 12px;
+            padding: 20px;
+            font-size: 0.8rem;
+            line-height: 1.8;
+            color: #2e2e2e;
         }
 
         h1 {
-            color: #33ff33;
+            color: #f45d48;
             font-size: 1.3rem;
             margin-top: 0;
-            text-transform: uppercase;
+            text-shadow: 2px 2px 0 #f7f48b;
+        }
+
+        .hearts {
+            font-size: 2rem;
+            margin: 10px 0;
+            animation: pulse 1s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.15); }
         }
 
         .counter-box {
-            border: 1px dashed #33ff33;
+            background-color: #f7f48b;
+            color: #f45d48;
+            border: 3px dashed #f45d48;
             padding: 10px;
+            border-radius: 8px;
             margin: 15px 0;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
+            font-weight: bold;
         }
 
         .dialogue {
             margin-top: 15px;
-            border-left: 4px solid #33ff33;
-            padding-left: 10px;
+            background-color: #f45d48;
+            border: 3px solid #5bc8af;
+            padding: 10px;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 0.75rem;
             font-weight: bold;
         }
 
-        .freeform-btn {
+        .pdf-btn {
             display: inline-block;
             margin-top: 20px;
-            background-color: transparent;
-            color: #33ff33;
-            border: 2px solid #33ff33;
-            padding: 10px 15px;
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 0.85rem;
+            background-color: #f45d48;
+            color: #fff;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-family: 'Press+Start+2P', monospace;
+            font-size: 0.7rem;
             text-decoration: none;
-            text-shadow: 0 0 5px #33ff33;
-            box-shadow: 0 0 5px rgba(51, 255, 51, 0.4);
+            box-shadow: 0 4px 0 #b33827;
         }
 
-        .freeform-btn:hover {
-            background-color: #33ff33;
-            color: #050a05;
+        .pdf-btn:active {
+            transform: translateY(4px);
+            box-shadow: 0 0 0 #b33827;
         }
 
         .hidden {
             display: none !important;
         }
-
-        /* Efecto de escritura en pantalla */
-        .typing-effect {
-            overflow: hidden;
-            border-right: 0.15em solid #33ff33;
-            white-space: pre-wrap;
-            animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
-            margin: 0 auto;
-            max-width: 100%;
-        }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #33ff33; }
-        }
     </style>
 </head>
 <body>
 
-    <div class="terminal">
-        <div class="boring-box" id="screen1">
-            <h2> probando </h2>
-            <p style="font-size: 0.9rem;">> Holodisk detected: Test_Page_v48.esp</p>
-            <button class="boring-btn" onclick="revealSurprise()">[EXECUTE]</button>
-        </div>
+    <div class="boring-box" id="screen1">
+        <h2 style="font-family: monospace; color: #555;"> probando </h2>
+        <p style="color: #666; font-size: 0.9rem;">Pag de prueba jeje. bai.</p>
+        <button class="boring-btn" onclick="revealSurprise()">Pulsa aquí</button>
+    </div>
 
-        <div class="hidden" id="screen2">
-            <h1>> sorpresa boniiii</h1>
-            <p class="typing-effect">----------------------------------------</p>
+    <div class="adventure-box hidden" id="screen2">
+        <div class="screen">
+            <h1> boniiii</h1>
+            <div class="hearts">🖤🖤🖤</div>
 
-            <div class="counter-box" id="counter">> cargando...</div>
+            <div class="counter-box" id="counter">cargando...</div>
 
-            <p>> ola hermosa, como soy pobre recurro a esto.</p>
-            <p>> feliz 2do mes mi bonita!! la veda toy demasiado feliz y orgullosa k seas mi novia.</p>
+            <p>ola hermosa, como soy pobre recurro a esto.</p>
+            <p>feliz 2do mes mi bonita!! la veda toy demasiado feliz y orgullosa k seas mi novia.</p>
             
             <div class="dialogue">
-                > eres mi cabecita chucha rasca huele mas pechocha, teamo
+                eres mi cabecita chucha rasca huele mas pechocha, teamo
             </div>
             
-            <a href="https://www.icloud.com/freeform-copy/6E0D43CE-0876-4450-8DA0-F4A92E0BECEA#2do_Mes" class="freeform-btn" target="_blank">> [ABRIR CARTA] </a>
+            <!-- Cambia 'carta.pdf' por el nombre exacto de tu archivo PDF cuando lo subas a GitHub -->
+            <a href="carta.pdf" class="pdf-btn" target="_blank">VER CARTA :)</a>
         </div>
     </div>
 
@@ -171,7 +166,7 @@
             const diffTime = Math.abs(today - startDate);
             const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
             
-            document.getElementById('counter').innerText = `> DIREC_REG: Día ${diffDays} tiempo soportando mis olores.`;
+            document.getElementById('counter').innerText = `Día ${diffDays} tiempo soportando mis olores `;
         }
     </script>
 
