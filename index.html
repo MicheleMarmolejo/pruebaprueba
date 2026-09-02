@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Test Page - Index</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        .boring-box {
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .boring-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .game-boy {
+            background-color: #8e8e99;
+            border: 10px solid #5e5e68;
+            border-radius: 30px;
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 15px 0 #3e3e48;
+            font-family: 'Press+Start+2P', monospace;
+            text-align: center;
+            color: #fff;
+        }
+
+        .screen {
+            background-color: #3a9679;
+            border: 8px solid #225a49;
+            border-radius: 10px;
+            padding: 25px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            text-shadow: 1px 1px 0 #0d0d1a;
+            color: #0d0d1a;
+        }
+
+        h1 {
+            color: #fef756;
+            font-size: 1.5rem;
+            margin-top: 0;
+            text-shadow: 3px 3px 0 #c41e3a;
+        }
+
+        .art {
+            font-size: 4rem;
+            margin: 15px 0;
+            line-height: 1;
+        }
+
+        .dialogue {
+            margin-top: 20px;
+            background-color: #fef756;
+            border: 4px solid #c41e3a;
+            padding: 12px;
+            border-radius: 10px;
+            color: #c41e3a;
+            text-shadow: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .freeform-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #c41e3a;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-family: 'Press+Start+2P', monospace;
+            font-size: 0.8rem;
+            text-decoration: none;
+            box-shadow: 0 4px 0 #8e0e1a;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="boring-box" id="screen1">
+        <h2 style="font-family: monospace; color: #555;">Hola Mundo, soy machuki</h2>
+        <p style="color: #666; font-size: 0.9rem;">Pag de prueba jeje. bai.</p>
+        <button class="boring-btn" onclick="revealSurprise()">Pulsa aquí</button>
+    </div>
+
+    <div class="game-boy hidden" id="screen2">
+        <div class="screen">
+            <h1>¡SORPRESA!</h1>
+            <div class="art">🖤🖤🖤</div>
+            <p>ola boni, no era una prueba!!.</p>
+            <p>feliz 2do mes mi bonita!! la veda toy demasiado feliz x y orgullosa k seas mi novia.</p>
+            <div class="dialogue">
+                eres mi cabecita chucha rasca huele mas pechocha, teamo
+            </div>
+            <a href="https://www.icloud.com/freeform-copy/6AAAE1D7-3EED-4F04-BC55-43E4C2D3DF4C#2do_Mes" class="freeform-btn" target="_blank">VER CARTA EN FREEFORM 💌</a>
+        </div>
+    </div>
+
+    <script>
+        function revealSurprise() {
+            document.getElementById('screen1').classList.add('hidden');
+            document.getElementById('screen2').classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
